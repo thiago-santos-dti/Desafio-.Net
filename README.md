@@ -13,7 +13,6 @@ Frontend:
 -Recusar leads.
 -Exibir leads no estado "Accepted".
 -Integração com a API backend para manipulação dos dados.
--Estilização responsiva e design limpo.
 
 Backend:
 -Implementação de uma API RESTful com .NET Core.
@@ -28,7 +27,6 @@ Frontend:
 -TypeScript
 -Axios
 -TanStack Query
--SCSS
 
 Backend:
 -.NET Core Web API
@@ -83,13 +81,25 @@ Instale as dependências do frontend:
 
 Configuração
 
+Banco de Dados:
+-O projeto está configurado para se conectar a um banco de dados local usando autenticação do Windows. O banco foi criado utilizando o SQL Server Management Studio.
+-Certifique-se de que o SQL Server está instalado e funcionando na sua máquina.
+-Abra o SQL Server Management Studio e crie um banco de dados chamado LeadsManagement.
+-A conexão com o banco de dados está configurada no arquivo appsettings.json do backend:
+--"ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=LeadsManagement;Trusted_Connection=True;"
+  }
+-Se necessário, ajuste os valores para refletir sua configuração local.
+-Execute as migrações para configurar as tabelas do banco de dados:
+--dotnet ef database update
+
 Frontend:
 -Certifique-se de que a URL da API backend está correta no código. Por padrão, ela está configurada como:
 --const API_URL = 'http://localhost:5133/api/leads';
 -Se necessário, altere o valor de API_URL nos arquivos de serviço (leadService.ts) para refletir o endereço correto da sua API.
 
 Backend:
--Configure o banco de dados SQL Server conforme as instruções do backend.
+-Configure o banco de dados SQL Server conforme as instruções.
 -Certifique-se de que a API está rodando antes de iniciar o frontend.
 
 

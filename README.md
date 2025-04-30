@@ -114,6 +114,5 @@ Licença
 Este projeto foi desenvolvido como parte de um desafio técnico e não possui uma licença específica.
 
 Contato
-Se tiver dúvidas ou sugestões, entre em contato:
 -Email: thiago.santos@dtidigtal.com.br
 -GitHub: thiago-santos-dti
